@@ -8,19 +8,15 @@ from time import sleep
 class OTAUpdater:
     """ This class handles OTA updates. It connects to the Wi-Fi, checks for updates, downloads and installs them."""
     def __init__(self, ssid, password, repo_url, filename):
+        
         self.filename = filename
         self.ssid = ssid
         self.password = password
         self.repo_url = repo_url
-        if "www.github.com" in self.repo_url :
-            print(f"Updating {repo_url} to raw.githubusercontent")
-            self.repo_url = self.repo_url.replace("www.github","raw.githubusercontent")
-        elif "github.com" in self.repo_url:
-            print(f"Updating {repo_url} to raw.githubusercontent'")
-            self.repo_url = self.repo_url.replace("github","raw.githubusercontent")            
-        self.version_url = self.repo_url + 'main/version.json'
+            
+        self.version_url = self.repo_url + '/version.json'
         print(f"version url is: {self.version_url}")
-        self.firmware_url = self.repo_url + 'main/' + filename
+        self.firmware_url = self.repo_url + '/' + filename
 
         # get the current version (stored in version.json)
         if 'version.json' in os.listdir():    
@@ -126,3 +122,4 @@ class OTAUpdater:
                 self.update_and_reset() 
         else:
             print('No new updates available.')
+

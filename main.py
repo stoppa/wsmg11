@@ -12,7 +12,7 @@ from ota import OTAUpdater
 
 from WIFI_CONFIG import SSID, PASSWORD
 
-firmware_url = "https://github.com/stoppa/wsmg11/main"
+firmware_url = "https://raw.githubusercontent.com/stoppa/wsmg11/refs/heads/master"
 
 files_to_update = [
     "button.py",
@@ -86,3 +86,5 @@ if __name__ == '__main__':
 #             
         
       
+
+
