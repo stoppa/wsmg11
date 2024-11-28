@@ -73,7 +73,8 @@ if __name__ == '__main__':
             
         else:
             LED.off()
-            
+            LED.on()
+            #test command
 
 #         
 #         if (cd.is_weekend() or cd.is_night_time) and BT_WIFI.get_button_state():
