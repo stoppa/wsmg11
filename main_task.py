@@ -8,22 +8,8 @@ import wifi
 import check_daytime as cd
 import telegram as tg
 import power as pw
-from ota import OTAUpdater
 
 from WIFI_CONFIG import SSID, PASSWORD
-
-firmware_url = "https://raw.githubusercontent.com/stoppa/wsmg11/refs/heads/master"
-
-files_to_update = [
-    "button.py",
-    "check_daytime.py",
-    "main.py",
-    "power.py",
-    "receive.py",
-    "telegram.py",
-    "wifi.py",
-    "WIFI_CONFIG.py"
-    ]
 
 BT_TV = Button(1)
 BT_WIFI = Button(2)
@@ -32,7 +18,7 @@ BT_BATH = Button(5)
 LED = Pin("LED", Pin.OUT)
 
         
-if __name__ == '__main__':
+def main:
     
     BT_WIFI.on()
 
@@ -73,8 +59,8 @@ if __name__ == '__main__':
             
         else:
             LED.off()
-            LED.on()
-            #test command
+
+            
 
 #         
 #         if (cd.is_weekend() or cd.is_night_time) and BT_WIFI.get_button_state():
