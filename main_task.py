@@ -18,7 +18,7 @@ BT_BATH = Button(5)
 LED = Pin("LED", Pin.OUT)
 
         
-def main:
+def main():
     
     BT_WIFI.on()
 
